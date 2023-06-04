@@ -28,7 +28,12 @@ The web application is built using the following technologies:
 
 To set up and run the web application locally, follow these steps:
 
-1. Clone this repository to your local machine.
+> If you are using VS Code, make sure you have prettier extension installed for the best development experience.
+
+1. Clone this repository to your local machine `git clone git@github.com:cremirdevio/qwikbill.git`
+2. Navigate into the project folder `cd qwikbill`
+3. Install all dependencies `npm install`
+4. Run the app `npm run dev`
 
 ## Deployment
 
