@@ -6,10 +6,11 @@ export default function Button({ variant, children }) {
 
   switch (variant) {
     case "solid":
-      bgColor = "bg-teal-500";
+      bgColor = "bg-teal-500 hover:bg-teal-500/90";
       break;
     case "outline":
-      bgColor = "bg-transparent border-2 border-solid border-teal-500";
+      bgColor =
+        "bg-transparent hover:bg-transparent/90 border-2 border-solid border-teal-500";
       break;
     default:
       bgColor = "bg-black";
