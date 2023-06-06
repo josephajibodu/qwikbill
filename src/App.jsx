@@ -1,5 +1,6 @@
 import Badge from "./components/ui/badge";
 import Button from "./components/ui/button";
+import Input from "./components/ui/input";
 
 function App() {
   // Router implementation here
@@ -9,6 +10,7 @@ function App() {
       <Button variant="solid" size="lg">
         Sign in
       </Button>
+      <Input placeholder="Enter your e-mail" type="text" />
     </div>
   );
 }
