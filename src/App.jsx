@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="flex text-3xl bg-orange-500 h-screen md:w-[700px]">
       <Badge variant="solid" />
-      <Button variant="solid" size="">
+      <Button variant="solid" size="lg">
         Sign in
       </Button>
     </div>

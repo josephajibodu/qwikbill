@@ -1,10 +1,8 @@
-// import { ReactPropTypes } from "react";
 import PropTypes from "prop-types";
 
-export default function Button({ variant, size, children }) {
+export default function Button({ variant, size, children, className }) {
   let bgColor;
   let btnSize;
-  let className;
 
   switch (variant) {
     case "solid":
@@ -45,10 +43,12 @@ Button.propTypes = {
   variant: PropTypes.string,
   children: PropTypes.node,
   size: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
   variant: "solid",
   children: "default",
-  size: "sm",
+  size: "default",
+  className: "",
 };
