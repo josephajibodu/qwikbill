@@ -1,8 +1,10 @@
 // import { ReactPropTypes } from "react";
 import PropTypes from "prop-types";
 
-export default function Button({ variant, children }) {
+export default function Button({ variant, size, children }) {
   let bgColor;
+  let btnSize;
+  let className;
 
   switch (variant) {
     case "solid":
@@ -17,10 +19,22 @@ export default function Button({ variant, children }) {
       break;
   }
 
+  switch (size) {
+    case "sm":
+      btnSize = "h-9 px-3 rounded-md";
+      break;
+    case "lg":
+      btnSize = "h-11 px-8 rounded-md";
+      break;
+    default:
+      btnSize = "h-10 py-2 px-4";
+      break;
+  }
+
   return (
     <button
       type="button"
-      className={`text-base cursor-pointer font-bold text-white rounded-[32px] h-max w-full py-4 ${bgColor}`}
+      className={`text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
     >
       {children}
     </button>
@@ -29,10 +43,12 @@ export default function Button({ variant, children }) {
 
 Button.propTypes = {
   variant: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.node,
+  size: PropTypes.string,
 };
 
 Button.defaultProps = {
   variant: "solid",
   children: "default",
+  size: "sm",
 };
