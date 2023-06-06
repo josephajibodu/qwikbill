@@ -12,14 +12,14 @@ export default function Button({ variant, children }) {
       bgColor = "bg-transparent border-2 border-solid border-teal-500";
       break;
     default:
-      bgColor = "bg-teal-500";
+      bgColor = "bg-black";
       break;
   }
 
   return (
     <button
       type="button"
-      className={`mt-2 text-base cursor-pointer font-bold text-white rounded-[32px] h-max w-full py-4 ${bgColor}`}
+      className={`mt-2  text-base cursor-pointer font-bold text-white rounded-[32px] h-max w-full py-4 ${bgColor}`}
     >
       {children}
     </button>
