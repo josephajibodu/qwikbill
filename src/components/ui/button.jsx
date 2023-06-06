@@ -19,7 +19,7 @@ export default function Button({ variant, children }) {
   return (
     <button
       type="button"
-      className={`mt-2  text-base cursor-pointer font-bold text-white rounded-[32px] h-max w-full py-4 ${bgColor}`}
+      className={`text-base cursor-pointer font-bold text-white rounded-[32px] h-max w-full py-4 ${bgColor}`}
     >
       {children}
     </button>
