@@ -32,7 +32,7 @@ export default function Button({ variant, size, children, className }) {
   return (
     <button
       type="button"
-      className={`text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
+      className={`block text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
     >
       {children}
     </button>
