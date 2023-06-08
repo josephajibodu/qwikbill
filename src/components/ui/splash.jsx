@@ -26,11 +26,6 @@ export default function Splash({ imgUrl, heading }) {
 }
 
 Splash.propTypes = {
-  imgUrl: PropTypes.string,
-  heading: PropTypes.string,
-};
-
-Splash.defaultProps = {
-  imgUrl: "default",
-  heading: "default",
+  imgUrl: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
 };

@@ -48,7 +48,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   variant: "solid",
-  children: "default",
+  children: "Button",
   size: "default",
   className: "",
 };
