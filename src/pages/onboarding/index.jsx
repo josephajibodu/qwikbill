@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Splash from "../../components/ui/splash";
 import splash1 from "../../assets/images/splash1.png";
@@ -17,13 +17,18 @@ const displayInterval = 1000;
 function Onboarding() {
   const [curScreen, setCurScreen] = useState(1);
 
-  setInterval(() => {
-    if (curScreen < imgUrls.length) {
-      setCurScreen(curScreen + 1);
-    } else {
-      setCurScreen(1);
-    }
-  }, displayInterval);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (curScreen < imgUrls.length) {
+        setCurScreen(curScreen + 1);
+      } else {
+        setCurScreen(1);
+      }
+      console.log(interval);
+    }, displayInterval);
+
+    return () => clearInterval(interval);
+  }, [curScreen]);
 
   return (
     <>

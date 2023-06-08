@@ -7,7 +7,7 @@ export default function Splash({ imgUrl, heading }) {
       <img
         src={imgUrl}
         alt="onboarding"
-        className="absolute object-cover h-full w-full"
+        className="absolute object-cover h-full w-full opacity-90"
       />
       <div className="flex flex-col mx-6 z-0">
         <h2 className="font-bold text-[22px] text-center mb-9 font-primary">
