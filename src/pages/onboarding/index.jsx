@@ -24,7 +24,6 @@ function Onboarding() {
       } else {
         setCurScreen(1);
       }
-      console.log(interval);
     }, displayInterval);
 
     return () => clearInterval(interval);
