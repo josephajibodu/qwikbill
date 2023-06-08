@@ -1,16 +1,15 @@
-import Badge from "./components/ui/badge";
-import Button from "./components/ui/button";
-import Input from "./components/ui/input";
+import Onboarding from "./pages/onboarding";
 
 function App() {
   // Router implementation here
   return (
     <div className="flex text-3xl bg-orange-500 h-screen md:w-[700px]">
-      <Badge variant="solid" />
+      {/* <Badge variant="solid" />
       <Button variant="solid" size="lg">
         Sign in
       </Button>
-      <Input placeholder="Enter your e-mail" type="text" />
+      <Input placeholder="Enter your e-mail" type="text" /> */}
+      <Onboarding />
     </div>
   );
 }

@@ -32,7 +32,7 @@ export default function Button({ variant, size, children, className }) {
   return (
     <button
       type="button"
-      className={`text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
+      className={`block text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
     >
       {children}
     </button>
@@ -48,7 +48,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   variant: "solid",
-  children: "default",
+  children: "Button",
   size: "default",
   className: "",
 };

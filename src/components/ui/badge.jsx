@@ -16,7 +16,7 @@ export default function Badge({ variant, type }) {
 
   return (
     <div
-      className={`inline-block p-2 border-2 ${extraClass}  w-min h-min flex items-center justify-center rounded-lg`}
+      className={`p-2 border-2 ${extraClass}  w-min h-min flex items-center justify-center rounded-lg`}
     >
       <svg
         xmlns="http://www.w3.ozrg/2000/svg"
