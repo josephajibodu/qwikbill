@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Splash from "../../components/ui/splash";
+import Splash from "../../components/splash";
 import splash1 from "../../assets/images/splash1.png";
 import splash2 from "../../assets/images/splash2.jpeg";
 import splash3 from "../../assets/images/splash3.jpeg";
