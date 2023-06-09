@@ -21,16 +21,17 @@ const splashScreenResources = [
   },
 ];
 const displayInterval = 10_000;
+const baseScreenState = 0;
 
 function Onboarding() {
-  const [curScreen, setCurScreen] = useState(1);
+  const [curScreen, setCurScreen] = useState(baseScreenState);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (curScreen < splashScreenResources.length) {
+      if (curScreen < splashScreenResources.length - 1) {
         setCurScreen(curScreen + 1);
       } else {
-        setCurScreen(1);
+        setCurScreen(baseScreenState);
       }
     }, displayInterval);
 
@@ -39,23 +40,16 @@ function Onboarding() {
 
   return (
     <>
-      {curScreen === 1 && (
-        <Splash
-          heading={splashScreenResources[0].heading}
-          imgUrl={splashScreenResources[0].image}
-        />
-      )}
-      {curScreen === 2 && (
-        <Splash
-          heading={splashScreenResources[1].heading}
-          imgUrl={splashScreenResources[1].image}
-        />
-      )}
-      {curScreen === 3 && (
-        <Splash
-          heading={splashScreenResources[2].heading}
-          imgUrl={splashScreenResources[2].image}
-        />
+      {splashScreenResources.map(
+        (splash, splashIndex) =>
+          curScreen === splashIndex && (
+            <Splash
+              key={splash}
+              heading={splash.heading}
+              imgUrl={splash.image}
+              opacity={curScreen === splashIndex ? "opacity-100" : "opacity-0"}
+            />
+          )
       )}
     </>
   );
