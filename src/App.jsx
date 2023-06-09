@@ -10,6 +10,7 @@ function App() {
       </Button>
       <Input placeholder="Enter your e-mail" type="text" /> */}
       <Login />
+      {/* <Onboarding /> */}
     </div>
   );
 }
