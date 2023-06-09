@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Button from "./button";
+import Button from "./ui/button";
 
 export default function Splash({ imgUrl, heading, opacity = "opacity-0" }) {
   return (
