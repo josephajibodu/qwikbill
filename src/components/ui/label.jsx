@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-function Label({ inputId, children, extraClass }) {
+function Label({ htmlFor, children, className }) {
   return (
     <label
-      htmlFor={inputId}
-      className={`font-secondary font-bold text-sm text-black/30 ${extraClass}`}
+      htmlFor={htmlFor}
+      className={`block font-secondary font-bold text-sm text-black/30 ${className}`}
     >
       {children}
     </label>
@@ -14,12 +14,12 @@ function Label({ inputId, children, extraClass }) {
 export default Label;
 
 Label.propTypes = {
-  inputId: PropTypes.string.isRequired,
+  htmlFor: PropTypes.string.isRequired,
   children: PropTypes.string,
-  extraClass: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Label.defaultProps = {
   children: "",
-  extraClass: "",
+  className: "",
 };
