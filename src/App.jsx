@@ -1,4 +1,5 @@
-import Label from "./components/ui/label";
+// import Label from "./components/ui/label";
+import Login from "./pages/login";
 // import Onboarding from "./pages/onboarding";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       </Button>
       <Input placeholder="Enter your e-mail" type="text" /> */}
       {/* <Onboarding /> */}
-      <Label>Email</Label>
+      <Login />
     </div>
   );
 }
