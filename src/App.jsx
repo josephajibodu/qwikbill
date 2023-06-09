@@ -1,4 +1,5 @@
-import Onboarding from "./pages/onboarding";
+import Label from "./components/ui/label";
+// import Onboarding from "./pages/onboarding";
 
 function App() {
   // Router implementation here
@@ -9,7 +10,8 @@ function App() {
         Sign in
       </Button>
       <Input placeholder="Enter your e-mail" type="text" /> */}
-      <Onboarding />
+      {/* <Onboarding /> */}
+      <Label>Email</Label>
     </div>
   );
 }
