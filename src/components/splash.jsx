@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
-import Button from "./button";
+import Button from "./ui/button";
 
-export default function Splash({ imgUrl, heading }) {
+export default function Splash({ imgUrl, heading, opacity = "opacity-0" }) {
   return (
-    <div className="relative flex flex-col h-screen w-screen justify-end font-primary bottom-0">
+    <div
+      className={`relative flex flex-col h-screen w-screen justify-end font-primary bottom-0 transition-all ${opacity}`}
+    >
       <img
         src={imgUrl}
         alt="onboarding"
@@ -28,4 +30,5 @@ export default function Splash({ imgUrl, heading }) {
 Splash.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
+  opacity: PropTypes.string.isRequired,
 };

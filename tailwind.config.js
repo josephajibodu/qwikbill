@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ["Manrope", "sans-serif"],
+        secondary: ["Inter", "sans-serif"],
       },
     },
   },

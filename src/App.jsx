@@ -1,4 +1,4 @@
-import Onboarding from "./pages/onboarding";
+import Login from "./pages/login";
 
 function App() {
   // Router implementation here
@@ -9,7 +9,8 @@ function App() {
         Sign in
       </Button>
       <Input placeholder="Enter your e-mail" type="text" /> */}
-      <Onboarding />
+      <Login />
+      {/* <Onboarding /> */}
     </div>
   );
 }
