@@ -20,11 +20,20 @@ const splashScreenResources = [
     image: splash3,
   },
 ];
+
+// const positions = [
+//   [2, 0, 1],
+//   [0, 1, 2],
+//   [1, 2, 0],
+// ];
+
 const displayInterval = 10_000;
 const baseScreenState = 0;
 
 function Onboarding() {
   const [curScreen, setCurScreen] = useState(baseScreenState);
+  // know the next index
+  const nextIndex = (curScreen + 1) % splashScreenResources.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,24 +43,21 @@ function Onboarding() {
         setCurScreen(baseScreenState);
       }
     }, displayInterval);
-
     return () => clearInterval(interval);
   }, [curScreen]);
 
   return (
-    <>
-      {splashScreenResources.map(
-        (splash, splashIndex) =>
-          curScreen === splashIndex && (
-            <Splash
-              key={splash}
-              heading={splash.heading}
-              imgUrl={splash.image}
-              opacity={curScreen === splashIndex ? "opacity-100" : "opacity-0"}
-            />
-          )
-      )}
-    </>
+    <div className="relative w-full overflow-hidden">
+      {splashScreenResources.map((splash, splashIndex) => (
+        <Splash
+          key={splash}
+          heading={splash.heading}
+          imgUrl={splash.image}
+          isActive={curScreen === splashIndex}
+          isNext={splashIndex === nextIndex}
+        />
+      ))}
+    </div>
   );
 }
 

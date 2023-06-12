@@ -19,10 +19,10 @@ export default function Button({ variant, size, children, className }) {
 
   switch (size) {
     case "sm":
-      btnSize = "h-9 px-3 rounded-md";
+      btnSize = "h-9 px-3";
       break;
     case "lg":
-      btnSize = "h-11 px-8 rounded-md";
+      btnSize = "h-11 px-8";
       break;
     default:
       btnSize = "h-10 py-2 px-4";
@@ -32,7 +32,7 @@ export default function Button({ variant, size, children, className }) {
   return (
     <button
       type="button"
-      className={`block text-base cursor-pointer font-bold text-white ${bgColor} ${btnSize} ${className}`}
+      className={`block text-base cursor-pointer font-bold text-white rounded-full ${bgColor} ${btnSize} ${className}`}
     >
       {children}
     </button>
