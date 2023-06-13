@@ -16,8 +16,8 @@ export default function RegisterStep2() {
           <b className="text-base font-bold">johndoe@example.com</b>
         </p>
       </div>
-      <Label htmlFor="e-mail">Enter OTP</Label>
-      <Input type="e-mail" id="e-mail" />
+      <Label htmlFor="otp">Enter OTP</Label>
+      <Input type="number" id="otp" />
       <Button variant="solid" size="lg" className="mt-[100px]">
         Continue
       </Button>

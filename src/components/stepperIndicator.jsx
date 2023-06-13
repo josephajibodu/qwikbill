@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import BackArrowIcon from "./icons/backArrow";
 
 export default function StepperIndicator({ currStep }) {
-  const totalSteps = 5;
+  const totalSteps = 4;
   const steps = Array(totalSteps).fill(null);
   return (
     <div className="bg-white flex gap-[10vw] space-x-7 py-6">
