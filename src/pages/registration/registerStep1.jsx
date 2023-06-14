@@ -1,12 +1,13 @@
+import PropTypes from "prop-types";
 import Button from "../../components/ui/button";
 import Input from "../../components/ui/input";
 import Label from "../../components/ui/label";
 import StepperIndicator from "../../components/stepperIndicator";
 
-export default function RegisterStep1() {
+export default function RegisterStep1({ setStep }) {
   return (
     <div className="flex flex-col bg-white h-full px-8">
-      <StepperIndicator currStep="1" />
+      <StepperIndicator currentStep={1} totalSteps={4} setStep={setStep} />
       <h2 className="font-secondary text-xl font-bold text-gray-700">
         What&apos;s your Email Address?
       </h2>
@@ -17,9 +18,13 @@ export default function RegisterStep1() {
       </div>
       <Label htmlFor="e-mail">Email Address</Label>
       <Input type="e-mail" id="e-mail" />
-      <Button variant="solid" size="lg" className="mt-[100px]">
+      <Button variant="solid" size="lg" className="mt-[120px]">
         Continue
       </Button>
     </div>
   );
 }
+
+RegisterStep1.propTypes = {
+  setStep: PropTypes.number.isRequired,
+};

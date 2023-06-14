@@ -1,26 +1,37 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from "prop-types";
-
 import BackArrowIcon from "./icons/backArrow";
 
-export default function StepperIndicator({ currStep }) {
-  const totalSteps = 4;
+export default function StepperIndicator({ currentStep, totalSteps, setStep }) {
   const steps = Array(totalSteps).fill(null);
+  const stepBack = currentStep - 1;
+  function handleStepBack() {
+    if (stepBack < 1);
+    else setStep(stepBack);
+  }
+
+  function onStepChange(stepIndex) {
+    setStep(stepIndex);
+  }
+
   return (
     <div className="bg-white flex gap-[10vw] space-x-7 py-6">
-      <BackArrowIcon />
+      <div className="cursor-pointer" onClick={handleStepBack}>
+        <BackArrowIcon />
+      </div>
       <div className="flex gap-0.5 self-center">
-        {steps.map((step, index) => {
+        {steps.map((curStep, index) => {
           let borderClass;
           if (index === 0) borderClass = "rounded-l-full";
           else if (index === steps.length - 1) borderClass = "rounded-e-full";
-
           let bgColor = "bg-gray-400";
-          if (index + 1 <= currStep) bgColor = "bg-teal-500";
+          if (index + 1 <= currentStep) bgColor = "bg-teal-500";
           return (
             <div
-              key={step}
-              className={`w-7 h-[5px] ${bgColor} ${borderClass}`}
-              // onClick={() => onStepChange && onStepChange(index + 1)}
+              key={curStep}
+              className={`w-7 h-[5px] cursor-pointer ${bgColor} ${borderClass}`}
+              onClick={() => onStepChange && onStepChange(index + 1)}
             />
           );
         })}
@@ -30,9 +41,7 @@ export default function StepperIndicator({ currStep }) {
 }
 
 StepperIndicator.propTypes = {
-  currStep: PropTypes.string.isRequired,
+  currentStep: PropTypes.number.isRequired,
+  totalSteps: PropTypes.number.isRequired,
+  setStep: PropTypes.number.isRequired,
 };
-
-// StepperIndicator.defaultProps = {
-//   className: "",
-// };

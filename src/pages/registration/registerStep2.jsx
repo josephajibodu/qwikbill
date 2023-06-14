@@ -1,12 +1,13 @@
+import PropTypes from "prop-types";
 import Button from "../../components/ui/button";
 import Input from "../../components/ui/input";
 import Label from "../../components/ui/label";
 import StepperIndicator from "../../components/stepperIndicator";
 
-export default function RegisterStep2() {
+export default function RegisterStep2({ setStep }) {
   return (
     <div className="flex flex-col bg-white h-full px-8 font-secondary">
-      <StepperIndicator currStep="2" />
+      <StepperIndicator currentStep={2} totalSteps={4} setStep={setStep} />
       <h2 className="font-secondary text-xl font-bold text-gray-700">
         Confirm Email Address
       </h2>
@@ -17,8 +18,8 @@ export default function RegisterStep2() {
         </p>
       </div>
       <Label htmlFor="otp">Enter OTP</Label>
-      <Input type="number" id="otp" />
-      <Button variant="solid" size="lg" className="mt-[100px]">
+      <Input type="" id="otp" />
+      <Button variant="solid" size="lg" className="mt-[120px]">
         Continue
       </Button>
       <div className=" mt-6 text-xs font-bold text-center text-gray-600">
@@ -30,3 +31,7 @@ export default function RegisterStep2() {
     </div>
   );
 }
+
+RegisterStep2.propTypes = {
+  setStep: PropTypes.number.isRequired,
+};
