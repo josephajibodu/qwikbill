@@ -1,17 +1,17 @@
 import { useState } from "react";
-import RegisterStep1 from "./registerStep1";
-import RegisterStep2 from "./registerStep2";
-import RegisterStep3 from "./registerStep3";
-import RegisterStep4 from "./registerStep4";
+import RegisterStepOne from "./registerStepOne";
+import RegisterStepTwo from "./registerStepTwo";
+import RegisterStepThree from "./registerStepThree";
+import RegisterStepFour from "./registerStepFour";
 
 export default function Register() {
   const [step, setStep] = useState(1);
   return (
     <div className="h-full">
-      {step === 1 && <RegisterStep1 setStep={setStep} />}
-      {step === 2 && <RegisterStep2 setStep={setStep} />}
-      {step === 3 && <RegisterStep3 setStep={setStep} />}
-      {step === 4 && <RegisterStep4 setStep={setStep} />}
+      {step === 1 && <RegisterStepOne setStep={setStep} />}
+      {step === 2 && <RegisterStepTwo setStep={setStep} />}
+      {step === 3 && <RegisterStepThree setStep={setStep} />}
+      {step === 4 && <RegisterStepFour setStep={setStep} />}
     </div>
   );
 }

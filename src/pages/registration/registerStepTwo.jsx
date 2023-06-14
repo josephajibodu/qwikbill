@@ -4,7 +4,7 @@ import Input from "../../components/ui/input";
 import Label from "../../components/ui/label";
 import StepperIndicator from "../../components/stepperIndicator";
 
-export default function RegisterStep2({ setStep }) {
+export default function RegisterStepTwo({ setStep }) {
   return (
     <div className="flex flex-col bg-white h-full px-8 font-secondary">
       <StepperIndicator currentStep={2} totalSteps={4} setStep={setStep} />
@@ -32,6 +32,6 @@ export default function RegisterStep2({ setStep }) {
   );
 }
 
-RegisterStep2.propTypes = {
+RegisterStepTwo.propTypes = {
   setStep: PropTypes.number.isRequired,
 };
