@@ -1,13 +1,10 @@
-import PropTypes from "prop-types";
 import Button from "../../components/ui/button";
 import Input from "../../components/ui/input";
 import Label from "../../components/ui/label";
-import StepperIndicator from "../../components/stepperIndicator";
 
-export default function RegisterStepFour({ setStep }) {
+export default function RegisterStepFour() {
   return (
     <div className="flex flex-col bg-white h-full px-8">
-      <StepperIndicator currentStep={4} totalSteps={4} setStep={setStep} />
       <h2 className="font-secondary text-xl font-bold text-gray-700">
         Setup your Password
       </h2>
@@ -36,7 +33,3 @@ export default function RegisterStepFour({ setStep }) {
     </div>
   );
 }
-
-RegisterStepFour.propTypes = {
-  setStep: PropTypes.number.isRequired,
-};

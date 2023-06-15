@@ -16,20 +16,21 @@ export default function StepperIndicator({ currentStep, totalSteps, setStep }) {
   }
 
   return (
-    <div className="bg-white flex gap-[10vw] space-x-7 py-6">
+    <div className="bg-white flex gap-[10vw] space-x-7 py-6 pl-8">
       <div className="cursor-pointer" onClick={handleStepBack}>
         <BackArrowIcon />
       </div>
       <div className="flex gap-0.5 self-center">
         {steps.map((curStep, index) => {
           let borderClass;
+          const stepId = index;
           if (index === 0) borderClass = "rounded-l-full";
           else if (index === steps.length - 1) borderClass = "rounded-e-full";
           let bgColor = "bg-gray-400";
           if (index + 1 <= currentStep) bgColor = "bg-teal-500";
           return (
             <div
-              key={curStep}
+              key={stepId}
               className={`w-7 h-[5px] cursor-pointer ${bgColor} ${borderClass}`}
               onClick={() => onStepChange && onStepChange(index + 1)}
             />
@@ -43,5 +44,5 @@ export default function StepperIndicator({ currentStep, totalSteps, setStep }) {
 StepperIndicator.propTypes = {
   currentStep: PropTypes.number.isRequired,
   totalSteps: PropTypes.number.isRequired,
-  setStep: PropTypes.number.isRequired,
+  setStep: PropTypes.func.isRequired,
 };
