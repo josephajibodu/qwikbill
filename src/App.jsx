@@ -1,7 +1,7 @@
 // import Login from "./pages/login";
 // import Onboarding from "./pages/onboarding";
 
-import Register from "./pages/registration/register";
+import Registration from "./pages/registration";
 
 // import StepperIndicator from "./components/stepperIndicator";
 
@@ -12,7 +12,7 @@ function App() {
       {/* <Badge variant="solid" />
       <Button variant="solid" size="lg">
         Sign in */}
-      <Register />
+      <Registration />
     </div>
   );
 }
