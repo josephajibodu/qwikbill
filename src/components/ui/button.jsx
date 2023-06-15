@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
 
-export default function Button({ variant, size, children, className }) {
+export default function Button({
+  variant,
+  size,
+  children,
+  className,
+  ...props
+}) {
   let bgColor;
   let btnSize;
 
@@ -33,6 +39,7 @@ export default function Button({ variant, size, children, className }) {
     <button
       type="button"
       className={`block text-base cursor-pointer font-bold text-white rounded-full ${bgColor} ${btnSize} ${className}`}
+      {...props}
     >
       {children}
     </button>
