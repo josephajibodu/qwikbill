@@ -1,17 +1,18 @@
 // import Login from "./pages/login";
-import Onboarding from "./pages/onboarding";
+// import Onboarding from "./pages/onboarding";
+
+import Registration from "./pages/registration";
+
+// import StepperIndicator from "./components/stepperIndicator";
 
 function App() {
   // Router implementation here
   return (
-    <div className="flex text-3xl bg-white-500 h-screen w-full md:w-[700px]">
+    <div className=" text-3xl bg-orange-500 h-screen w-full md:w-[700px]">
       {/* <Badge variant="solid" />
       <Button variant="solid" size="lg">
-        Sign in
-      </Button>
-      <Input placeholder="Enter your e-mail" type="text" /> */}
-      {/* <Login /> */}
-      <Onboarding />
+        Sign in */}
+      <Registration />
     </div>
   );
 }
